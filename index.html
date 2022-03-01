@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>upload csv file to MySQL database</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body style="background-color: #f1f1f1">
+ 
+<div class="container">
+  <div class="wholecard">
+
+      <div class="heading"><h1>Upload csv file to MySQL database</h1></div>
+    <div class="upload"><p><i class="fa fa-cloud-upload" aria-hidden="true"> </i><span class="up">UpLoad</span></p></div>
+      <div class="box">
+        <form action="/uploadfile" enctype="multipart/form-data" method="post">
+          <lable for="cf"> <i class="fa fa-file-text-o pointer-none" aria-hidden="true"></i></lable>
+          <input id="cf" type="file" name="uploadfile" accept='csv'>
+          <input class="button" type="submit" value="Upload CSV">
+        </form>
+      </div>
+  </div>
+   
+
+  <div class="wholecard">
+       <div class="heading"><h1>Upload Excel file to MySQL database</h1></div>
+      <div class="upload"><p><i class="fa fa-cloud-upload" aria-hidden="true"> </i><span class="up">UpLoad</span></p></div>
+      <div class="box">
+        <form action="/upload" enctype="multipart/form-data" method="post">
+          <i class="fa fa-file-text-o pointer-none" aria-hidden="true"></i>
+          <input   type="file" name="renfile"
+            accept='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel'>
+          <input class="button" type="submit" value="Upload Excel">
+        </form>
+      </div>
+   </div>
+</div>
+</body>
+
+</html>
+
+<style>
+  .wholecard {
+    float: left;
+    width: 40%;
+     margin-left: 160px;
+     
+  }
+.container{margin-top: 150px;}
+  .heading {
+    color: rgb(0, 0, 0);
+    font-size: medium;
+  }
+  .container::after{
+    content: "";
+  display: table;
+  clear: both;
+  }
+
+  .button {
+    display: inline-block;
+    cursor: pointer;
+    background: #eee;
+    padding: 8px 16px;
+    border-radius: 2px;
+    margin-right: 8px;
+    background: #2196F3;
+    color: white; 
+
+  }
+
+  .upload {
+    position: relative;
+    width: 400px;
+    height: 120px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(black, .2);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: #2196F3;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .upload p i {
+    color: white;
+    margin-left: 160px;
+    font-size: 60px;
+  }
+
+  .upload p span {
+    color: white;
+    margin: 135px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+
+  }
+
+  .box {
+    font-size: 80px;
+    color: gray;
+    position: relative;
+    width: 400px;
+    min-height: 130px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(5, 4, 4, 0.2);
+        background: #fafbfc;
+  }
+
+  .box i {
+    margin-left: 150px;
+    margin-top: 50px;
+  }
+
+  .choosefile {
+    position: absolute;
+    margin-bottom: 150px;
+  }
+
+  input[type="file"i] {
+    appearance: none;
+    background-color: initial;
+    cursor: default;
+    align-items: center;
+    color: inherit;
+    text-overflow: ellipsis;
+    white-space: pre;
+    text-align: start !important;
+    padding: initial;
+    border: none;
+    overflow: hidden !important;
+    margin-left: 95px;
+    margin-top: 50px;
+  }
+
+  .button {
+    margin-left: 145px;
+  }
+</style>
