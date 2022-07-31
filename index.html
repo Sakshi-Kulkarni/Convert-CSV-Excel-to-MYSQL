@@ -9,13 +9,17 @@
 
 </head>
 
-<body style="background-color: #f1f1f1">
- 
-<div class="container">
-  <div class="wholecard">
+<body style="background-color: #ffffff">
 
-      <div class="heading"><h1>Upload csv file to MySQL database</h1></div>
-    <div class="upload"><p><i class="fa fa-cloud-upload" aria-hidden="true"> </i><span class="up">UpLoad</span></p></div>
+  <div class="container">
+    <div class="wholecard">
+
+      <div class="heading">
+        <h1>Convert CSV to MySQL database</h1>
+      </div>
+      <div class="upload">
+        <p><i class="fa fa-cloud-upload" aria-hidden="true"> </i><span class="up">UpLoad</span></p>
+      </div>
       <div class="box">
         <form action="/uploadfile" enctype="multipart/form-data" method="post">
           <lable for="cf"> <i class="fa fa-file-text-o pointer-none" aria-hidden="true"></i></lable>
@@ -23,22 +27,26 @@
           <input class="button" type="submit" value="Upload CSV">
         </form>
       </div>
-  </div>
-   
+    </div>
 
-  <div class="wholecard">
-       <div class="heading"><h1>Upload Excel file to MySQL database</h1></div>
-      <div class="upload"><p><i class="fa fa-cloud-upload" aria-hidden="true"> </i><span class="up">UpLoad</span></p></div>
+
+    <div class="wholecard">
+      <div class="heading">
+        <h1>Convert Excel to MySQL database</h1>
+      </div>
+      <div class="upload">
+        <p><i class="fa fa-cloud-upload" aria-hidden="true"> </i><span class="up">UpLoad</span></p>
+      </div>
       <div class="box">
         <form action="/upload" enctype="multipart/form-data" method="post">
           <i class="fa fa-file-text-o pointer-none" aria-hidden="true"></i>
-          <input   type="file" name="renfile"
+          <input type="file" name="renfile"
             accept='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel'>
           <input class="button" type="submit" value="Upload Excel">
         </form>
       </div>
-   </div>
-</div>
+    </div>
+  </div>
 </body>
 
 </html>
@@ -47,30 +55,47 @@
   .wholecard {
     float: left;
     width: 40%;
-     margin-left: 160px;
-     
+    margin-left: 100px;
+    margin-top: -50px;
+
   }
-.container{margin-top: 150px;}
-  .heading {
+
+  .container {
+    margin-top: 100px;
+  }
+
+  /* .heading {
     color: rgb(0, 0, 0);
     font-size: medium;
-  }
-  .container::after{
+  }*/
+  .heading {
+    color:#563d7c;;
+    font-family:  Franklin Gothic Medium;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 44px;
+    text-align: center;
+    margin-left: -120px;
+    margin-bottom: 40px;
+   }
+
+  .container::after {
     content: "";
-  display: table;
-  clear: both;
+    display: table;
+    clear: both;
   }
 
   .button {
     display: inline-block;
     cursor: pointer;
-    background: #eee;
-    padding: 8px 16px;
-    border-radius: 2px;
+     padding: 8px 16px;
+    border-radius: 5px;
     margin-right: 8px;
-    background: #2196F3;
-    color: white; 
-
+    background: #563d7c;
+    color: white;
+    font-size: large;
+    font-family: 'Droid serif', serif;
   }
 
   .upload {
@@ -82,7 +107,7 @@
     box-shadow: 0 2px 5px rgba(black, .2);
     padding-top: 5px;
     padding-bottom: 5px;
-    background: #2196F3;
+    background: #563d7c;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
@@ -90,6 +115,7 @@
     color: white;
     margin-left: 160px;
     font-size: 60px;
+    
   }
 
   .upload p span {
@@ -98,7 +124,7 @@
     font-size: 30px;
     font-weight: bold;
     text-align: center;
-
+ 
   }
 
   .box {
@@ -109,8 +135,8 @@
     min-height: 130px;
     box-sizing: border-box;
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(5, 4, 4, 0.2);
-        background: #fafbfc;
+    box-shadow: 0 8px 8px 0 rgba(5, 4, 4, 0.2);
+    background: #e9ecef;
   }
 
   .box i {
@@ -123,7 +149,7 @@
     margin-bottom: 150px;
   }
 
-  input[type="file"i] {
+  input[type="file" i] {
     appearance: none;
     background-color: initial;
     cursor: default;
